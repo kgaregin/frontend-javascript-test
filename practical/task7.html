@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 7</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="lib/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/bootstrap-switch.min.css" rel="stylesheet">
+    <link href="lib/task7.css" rel="stylesheet">
+    <script src="lib/jquery-3.1.0.min.js"></script>
+    <script src="lib/lodash.js"></script>
+    <script src="task7.js"></script>
+    <!-- доп. библиотека для кнопочки-переключателя (http://www.bootstrap-switch.org/)-->
+    <!-- не содержит ГМО! (bootstrap.js, etc.)-->
+    <script src="lib/bootstrap-switch.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="jumbotron">
+                <h1><a href="">Практическая задача №2</a></h1>
+                <p>Javascript-компонент для сортировки таблиц с данными.</p>
+                <p>Объем данных: <input title="Choose data size" type="checkbox" name="data-size-checkbox"
+                                        data-on-text="Маленький" data-off-color="primary" data-off-text="Большой"
+                                        checked></p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Таблица</h3>
+                </div>
+                <div class="panel-body">
+
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button onclick="filterTable(userF)" class="btn btn-default">Найти</button>
+                        </span>
+                        <input id="filter" class="form-control" placeholder="Search for...">
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                    <div class="text-center">
+                        <ul class="pagination pagination-container">
+                        </ul>
+                    </div>
+
+                    <table id="user-table" class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th id="id" class="field" onclick="sortTable(this)">id ▼</th>
+                            <th id="firstName" class="field" onclick="sortTable(this)">firstName</th>
+                            <th id="lastName" class="field" onclick="sortTable(this)">lastName</th>
+                            <th id="email" class="field" onclick="sortTable(this)">email</th>
+                            <th id="phone" class="field" onclick="sortTable(this)">phone</th>
+                        </tr>
+                        </thead>
+                        <tbody id="user-table-body">
+                        </tbody>
+                    </table>
+
+                    <div class="text-center">
+                        <ul class="pagination pagination-container">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="additional-info" class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Дополнительная информация</h3>
+                </div>
+                <div id="additional-info-body" class="panel-body">
+                    Выбран пользователь <b id="user-name"></b>
+                    <br>
+                    Описание:
+                    <br>
+                    <textarea id="user-description"></textarea>
+                    <br>
+                    Адрес проживания: <b id="user-address"></b>
+                    <br>
+                    Город: <b id="user-city"></b>
+                    <br>
+                    Провинция/штат: <b id="user-state"></b>
+                    <br>
+                    Индекс: <b id="user-zip"></b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

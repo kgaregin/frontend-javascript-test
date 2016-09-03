@@ -1,0 +1,36 @@
+.field {
+    cursor: pointer;
+}
+
+.progress-bar {
+    width: 0%;
+}
+
+.progress {
+    margin: 20px auto;
+}
+
+.pagination a {
+    cursor: pointer;
+}
+
+#additional-info{
+    display: none;
+}
+
+#user-description{
+    width: 100%;
+}
+
+h1 > a {
+   text-decoration: none !important;
+    color: black;
+}
+
+.hovered{
+    background-color: #eeeeee !important;
+}
+
+#user-table{
+    z-index: 1;
+}
